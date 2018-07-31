@@ -27,12 +27,12 @@ namespace SIMD_Explore
             stopwatch.Start();
             int[] answersNoneSIMD = StandardArrayAddition(a, b);
             stopwatch.Stop();
-            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+            Console.WriteLine("10M Int32s Standard: " + stopwatch.ElapsedMilliseconds + "ms");
 
             stopwatch.Restart();
             int[] answerSIMD = SIMDArrayAddition(a, b);
             stopwatch.Stop();
-            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+            Console.WriteLine("10M Int32s SIMD: " + stopwatch.ElapsedMilliseconds + "ms");
 
             Console.ReadKey();
 
